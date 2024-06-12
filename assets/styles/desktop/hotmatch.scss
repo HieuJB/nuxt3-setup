@@ -1,0 +1,165 @@
+.match {
+  display: flex;
+  &__card {
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 0.5px solid $grey-300;
+      background: $grey-50;
+      padding: 0px 0 0 5px;
+
+      .base-image {
+        width: 12px;
+        height: 12px;
+        object-fit: contain;
+      }
+      .fa {
+        cursor: pointer;
+        color: $grey-700;
+        &:hover {
+          filter: brightness(2.1);
+        }
+      }
+      .fa-sort-amount-desc {
+        margin-right: 10px;
+      }
+      :deep() {
+        .base-button {
+          border: none;
+          height: 30px;
+          width: 30px;
+          background: transparent;
+          border-left: 1px solid $grey-300;
+          transition: 0.4s all;
+          &:hover {
+            background: $grey-100;
+          }
+        }
+      }
+    }
+    &-flat {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      padding: 7px;
+      .competition-name {
+        font-size: 14px;
+        margin: 0;
+        line-height: 1;
+        font-weight: bold;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    padding: 10px 12px;
+    border-bottom: 1px solid $grey-200;
+    cursor: pointer;
+    transition: 0.3s all;
+    &:hover {
+      background: $grey-100;
+    }
+    &-date {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      width: 15%;
+      font-weight: 500;
+      font-size: 13px;
+      .fa {
+        font-size: 12px;
+        cursor: pointer;
+        color: $grey-700;
+        &:hover {
+          filter: brightness(2.1);
+        }
+      }
+    }
+    &-name {
+      width: 65%;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      word-break: break-all;
+      font-size: 14px;
+      flex-direction: column;
+      @include bp("md") {
+        flex-direction: row;
+        gap: 20px;
+      }
+      &-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        @include bp("md") {
+          width: 30%;
+          justify-content: flex-end;
+        }
+      }
+      &-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        @include bp("md") {
+          width: 30%;
+          justify-content: flex-start;
+        }
+      }
+      &-center {
+        color: $blue-500;
+        font-weight: 500;
+        text-align: center;
+      }
+    }
+    &-status {
+      width: 10%;
+      display: flex;
+      font-size: 14px;
+      align-items: center;
+      flex-direction: column;
+      @include bp("md") {
+        flex-direction: row;
+      }
+      &-left {
+        display: flex;
+        justify-content: center;
+        color: $blue-400;
+        flex-direction: column;
+        @include bp("md") {
+          width: 35%;
+          flex-direction: row;
+        }
+      }
+      &-center {
+        display: flex;
+        justify-content: center;
+        color: $grey-500;
+        @include bp("md") {
+          width: 35%;
+          flex-direction: row;
+        }
+      }
+      &-right {
+        display: flex;
+        gap: 3px;
+        align-items: center;
+        justify-content: center;
+        @include bp("md") {
+          width: 35%;
+          flex-direction: row;
+        }
+        i {
+          padding-bottom: 2px;
+          font-size: 12px;
+          color: $grey-500;
+        }
+        input {
+          height: 12px;
+        }
+      }
+    }
+  }
+}

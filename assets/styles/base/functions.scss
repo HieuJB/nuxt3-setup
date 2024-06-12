@@ -1,0 +1,33 @@
+/*
+* function: rem
+* Used to convert unit 'px' to 'rem'
+*/
+
+@function rem($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}
+
+/*
+* function: vh
+* Used to convert unit 'px' to 'vh'
+*/
+$viewPort: 1494;
+$viewPortMobile: 428;
+@function vh($size) {
+  $vh: ($viewPort * 0.01);
+  @return calc($size / $vh) * 1vh;
+}
+
+/*
+* function: vw
+* Used to convert unit 'px' to 'vw'
+*/
+@function vw($size) {
+  $vw: ($viewPort * 0.01);
+  @return calc($size / $vw) * 1vw;
+}
+@function vwMobile($size) {
+  $vw: ($viewPortMobile * 0.01);
+  @return calc($size / $vw) * 1vw;
+}
